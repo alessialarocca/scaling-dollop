@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prova 4</title>
+        <link rel="stylesheet" href="main.css">
+        <style type="text/css">
+
+        	.interfaccia {
+        		background-color: rgb(12, 12, 12);
+        		position: absolute;
+        		right: 30px;
+        		top: 50%;
+        		bottom: 0;
+        		padding: 15px;
+        		width: 350px;
+        	}
+        	.interfaccia input {
+        		width:  100%;
+        	}
+
+        	.interfaccia input[type="range"] {
+        		height: 2px;
+        		appearance: none;
+        		-webkit-appearance: none;
+        		border: none;
+        		background-color: rgb(255, 255, 255);
+        		display: block;
+        	}
+
+        	.interfaccia select {
+        		width: 100%;
+        		display: block;
+        	}
+
+        	.interfaccia label {
+        		margin-top: 2em;
+        		display: block;
+        	}
+
+        </style>
+    </head>
+    <body>
+       <div class="contenitore">
+            <div class="layer faccia">
+                <img src="assets/faccia_0.png" alt="">
+            </div>
+            <div class="layer bocca">
+                <img src="assets/bocca_0.png" alt="">
+            </div>
+            <div class="layer naso">
+                <img src="assets/naso_0.png" alt="">
+            </div>
+            <div class="layer occhio occhio-sx">
+                <img src="assets/occhio_0.png" alt="">
+            </div>  
+            <div class="layer occhio occhio-dx">
+                <img src="assets/occhio_0.png" alt="">
+            </div>                          
+        </div>
+
+        <div class="interfaccia">
+
+        	<label for="#input-volto"></label>
+			<input id="input-volto" type="range" step="1" value="0" min="0" max="2" >
+
+			<label for="#input-occhi"></label>
+			<input id="input-naso" type="range" step="1" value="0" min="0" max="2" >
+
+			<label for="#input-naso"></label>
+			<input id="input-bocca" type="range" step="1" value="0" min="0" max="2" >
+
+			<label for="#input-bocca"></label>
+			<input id="input-bocca" type="range" step="1" value="0" min="0" max="2" >
+
+			<label for="#input-capelli"></label>
+			<input id="input-bocca" type="range" step="1" value="0" min="0" max="2" >
+
+
+        </div>
+
+        <script>
+
+			document.querySelector("#input-volto").addEventListener("input", function(e){
+        		const v = e.target.value
+	            const immagine_faccia = document.querySelector(".faccia img")
+	            immagine_faccia.src = "assets/faccia_" + v + ".png"
+        	})
+			
+        
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
